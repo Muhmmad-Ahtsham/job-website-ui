@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply | HireHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">H</span>HireHub</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Find Jobs</a></li>
+          <li><a href="apply.html" aria-current="page">Apply</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a class="btn btn--primary btn--sm" href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="container container--narrow">
+      <header class="page-head">
+        <h1>Apply for a job</h1>
+        <p class="text-muted">Frontend Developer — Nexora Tech, Karachi. Fields marked <span class="req">*</span> are required.</p>
+      </header>
+
+      <form class="card form" action="#" method="post" enctype="multipart/form-data">
+        <div class="form-grid">
+
+          <div class="field">
+            <label class="form-label" for="app-name">Full name <span class="req">*</span></label>
+            <input class="form-control" id="app-name" name="fullname" type="text"
+                   placeholder="Ayesha Khan" autocomplete="name"
+                   required minlength="3" maxlength="60">
+            <p class="error-msg">Please enter your full name (3–60 characters).</p>
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="app-email">Email address <span class="req">*</span></label>
+            <input class="form-control" id="app-email" name="email" type="email"
+                   placeholder="you@example.com" autocomplete="email" required>
+            <p class="error-msg">Enter a valid email address.</p>
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="app-phone">Phone number <span class="req">*</span></label>
+            <input class="form-control" id="app-phone" name="phone" type="tel"
+                   placeholder="+92 300 1234567" autocomplete="tel"
+                   required pattern="[0-9+\-\s()]{7,20}"
+                   title="Digits, spaces, +, - or ( ) — 7 to 20 characters.">
+            <p class="error-msg">Enter a valid phone number.</p>
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="app-position">Position <span class="req">*</span></label>
+            <select class="form-control" id="app-position" name="position" required>
+              <option value="">-- Select a position --</option>
+              <option value="frontend">Frontend Developer</option>
+              <option value="backend">Backend Engineer</option>
+              <option value="designer">UI/UX Designer</option>
+            </select>
+            <p class="error-msg">Please choose the position you are applying for.</p>
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="app-start">Earliest start date <span class="req">*</span></label>
+            <input class="form-control" id="app-start" name="startdate" type="date" required>
+            <p class="error-msg">Please choose a start date.</p>
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="app-salary">Expected salary (PKR / month)</label>
+            <input class="form-control" id="app-salary" name="salary" type="number"
+                   min="0" max="1000000" step="1000" placeholder="150000">
+            <p class="error-msg">Enter an amount between 0 and 1,000,000.</p>
+          </div>
+
+          <div class="field field--full">
+            <label class="form-label" for="app-portfolio">Portfolio / GitHub URL</label>
+            <input class="form-control" id="app-portfolio" name="portfolio" type="url"
+                   placeholder="https://github.com/yourname">
+            <p class="error-msg">Enter a full URL starting with https://</p>
+          </div>
+
+          <div class="field field--full">
+            <label class="form-label" for="resume">Resume <span class="req">*</span></label>
+            <div class="file-drop">
+              <span class="file-drop__icon" aria-hidden="true">📄</span>
+              <span class="file-drop__text"><strong>Click to upload</strong> or drag your file here</span>
+              <span class="form-hint">Accepted: .pdf, .doc, .docx — max 2 MB</span>
+              <input class="file-drop__input" id="resume" name="resume" type="file"
+                     accept=".pdf,.doc,.docx" required aria-describedby="resume-hint">
+            </div>
+            <p class="form-hint" id="resume-hint">Your file is only shared with this employer.</p>
+            <p class="error-msg">Please attach your resume (PDF or DOCX).</p>
+          </div>
+
+          <div class="field field--full">
+            <label class="form-label" for="cover">Cover letter <span class="req">*</span></label>
+            <textarea class="form-control" id="cover" name="cover" rows="6"
+                      placeholder="Why are you a good fit for this role?"
+                      required minlength="50" maxlength="1200"></textarea>
+            <p class="form-hint">Minimum 50 characters.</p>
+            <p class="error-msg">Please write at least 50 characters.</p>
+          </div>
+
+          <div class="field field--full">
+            <label class="choice" for="consent">
+              <input id="consent" name="consent" type="checkbox" required>
+              I confirm the information is accurate and consent to it being shared with this employer. <span class="req">*</span>
+            </label>
+            <p class="error-msg">You must give consent before submitting.</p>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn--primary" type="submit">Submit application</button>
+          <a class="btn btn--ghost" href="jobs.html">Back to jobs</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 HireHub — Lab 3, HTML Forms + CSS Fundamentals.</div>
+  </footer>
+</body>
+</html>

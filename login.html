@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | HireHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">H</span>HireHub</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Find Jobs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="login.html" aria-current="page">Login</a></li>
+          <li><a class="btn btn--primary btn--sm" href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="container narrow">
+      <header class="page-head">
+        <h1>Welcome back</h1>
+        <p class="muted">Log in to manage your applications and saved jobs.</p>
+      </header>
+
+      <div class="alert alert--success" role="status">
+        <span aria-hidden="true">✔</span>
+        <span>Your account was verified. You can log in now.</span>
+      </div>
+
+      <form class="card form" action="#" method="post">
+        <div class="field">
+          <label class="form-label" for="login-email">Email address <span class="req">*</span></label>
+          <input class="form-control" id="login-email" name="email" type="email"
+                 placeholder="you@example.com" autocomplete="username" required>
+          <p class="error-msg">Enter a valid email address.</p>
+        </div>
+
+        <div class="field" style="margin-top:1.5rem;">
+          <label class="form-label" for="login-password">Password <span class="req">*</span></label>
+          <input class="form-control" id="login-password" name="password" type="password"
+                 placeholder="Your password" autocomplete="current-password"
+                 required minlength="8">
+          <p class="form-hint">Minimum 8 characters.</p>
+          <p class="error-msg">Password must be at least 8 characters long.</p>
+        </div>
+
+        <div class="field" style="margin-top:1rem;">
+          <label class="choice" for="remember">
+            <input id="remember" name="remember" type="checkbox" value="yes">
+            Keep me signed in on this device
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn--primary" type="submit">Log In</button>
+          <a class="btn btn--ghost" href="register.html">Create account</a>
+        </div>
+
+        <p class="form-hint" style="margin-top:1rem;">
+          <a href="#">Forgot your password?</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 HireHub — Lab 3, HTML Forms + CSS Fundamentals.</div>
+  </footer>
+</body>
+</html>

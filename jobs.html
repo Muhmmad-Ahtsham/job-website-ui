@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Jobs | HireHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">H</span>HireHub</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html" aria-current="page">Find Jobs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a class="btn btn--primary btn--sm" href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="container">
+      <header class="page-head">
+        <h1>Find jobs</h1>
+        <p class="muted">Filter by keyword, location, category and job type.</p>
+      </header>
+
+      <div class="alert alert--success" role="status">
+        <span aria-hidden="true">✔</span>
+        <span>12 new jobs match your saved search "Frontend Developer".</span>
+      </div>
+
+      <!-- SEARCH FORM — method="get" because it only filters -->
+      <form class="card form" action="jobs.html" method="get" role="search" aria-label="Job search">
+        <div class="form-grid">
+
+          <div class="field">
+            <label class="form-label" for="q">Keyword</label>
+            <input class="form-control" id="q" name="q" type="search"
+                   placeholder="e.g. Frontend Developer" minlength="2" maxlength="60">
+            <p class="form-hint">Minimum 2 characters.</p>
+            <p class="error-msg">Enter at least 2 characters.</p>
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="location">Location</label>
+            <input class="form-control" id="location" name="location" type="text"
+                   placeholder="City or country" maxlength="60">
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="category">Category</label>
+            <select class="form-control" id="category" name="category">
+              <option value="">All categories</option>
+              <option value="engineering">Engineering</option>
+              <option value="design">Design</option>
+              <option value="marketing">Marketing</option>
+              <option value="finance">Finance</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="jobtype">Job type</label>
+            <select class="form-control" id="jobtype" name="jobtype">
+              <option value="">Any type</option>
+              <option value="fulltime">Full-time</option>
+              <option value="parttime">Part-time</option>
+              <option value="contract">Contract</option>
+              <option value="internship">Internship</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="form-label" for="experience">Minimum experience (years)</label>
+            <input class="form-control" id="experience" name="experience" type="number"
+                   min="0" max="30" step="1" placeholder="0">
+            <p class="error-msg">Enter a number between 0 and 30.</p>
+          </div>
+
+          <div class="field">
+            <fieldset class="field" style="gap:.5rem;">
+              <legend class="form-label">Work mode</legend>
+              <div class="choice-group">
+                <label class="choice" for="remote">
+                  <input id="remote" name="remote" type="checkbox" value="1"> Remote only
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn--primary" type="submit">Search jobs</button>
+          <button class="btn btn--ghost" type="reset">Clear filters</button>
+        </div>
+      </form>
+
+      <h2 style="margin-top:2rem;">Results</h2>
+      <div class="job-grid">
+
+        <article class="job-card">
+          <h3>Frontend Developer</h3>
+          <p class="job-card__meta">Nexora Tech · Karachi, PK · Full-time</p>
+          <ul class="tags"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JS</li></ul>
+          <a class="btn btn--primary btn--sm" href="apply.html">Apply now</a>
+        </article>
+
+        <article class="job-card">
+          <h3>Junior Web Developer</h3>
+          <p class="job-card__meta">BrightLabs · Remote · Full-time</p>
+          <ul class="tags"><li class="tag">HTML</li><li class="tag tag--alt">Bootstrap</li></ul>
+          <a class="btn btn--primary btn--sm" href="apply.html">Apply now</a>
+        </article>
+
+        <article class="job-card">
+          <h3>UI Engineer</h3>
+          <p class="job-card__meta">PixelWorks · Islamabad, PK · Contract</p>
+          <ul class="tags"><li class="tag">CSS</li><li class="tag tag--alt">Accessibility</li></ul>
+          <a class="btn btn--primary btn--sm" href="apply.html">Apply now</a>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 HireHub — Lab 3, HTML Forms + CSS Fundamentals.</div>
+  </footer>
+</body>
+</html>
